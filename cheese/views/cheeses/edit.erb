@@ -1,0 +1,10 @@
+<h3>Edit a specific cheese</h3>
+
+
+
+<form action="/cheeses/<%= @cheese.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<input type="text" name="cheese[name]" value="<%= @cheese.name %>">
+	<input type="text" name="cheese[year]" value="<%= @cheese.year %>">
+	<input type="submit"  value="<%= Update Cheese%>">
+</form>

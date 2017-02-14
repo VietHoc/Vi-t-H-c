@@ -1,0 +1,20 @@
+<h2>Show a single cheeses</h2>
+<h1>Yum</h1>
+
+<a href="/cheeses">
+All The Cheese
+</a>
+
+<h1>
+	<%= @cheeses.name %> is good.
+</h1>
+
+<a href="">EDIT</a>
+<form action="/cheeses/<%= @cheese.id %>/edit" method="get">
+	<input type="sub" value="Edit">
+</form>
+
+<form action="/cheeses/<%= @cheese.id %>" method="post">
+	<input type="hiden" name="_method" value="delete">
+	<input type="submit" value="Eat/Delete">
+</form>

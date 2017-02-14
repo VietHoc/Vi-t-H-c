@@ -1,0 +1,39 @@
+<h3>Display all the cheeses</h3>
+
+<a href="/cheeses/new">New Cheese</a>
+<!--
+<ul>
+	<% @cheeses.each do |cheeses| %>
+		<li>
+			<a href="/cheeses/<%= cheese.id %>">
+			<%= cheeses.name %> (<%= cheeses.year %>)
+			</a>
+		</li>
+	<% end %>
+
+</ul>
+-->
+<table>
+	<% @cheese.each do | cheese | %>
+	<tr>
+		
+		<td>
+			<a href="/cheese/<%= cheese.id%>">
+			<%= cheese.name %>
+			</a>
+		</td>
+		<td>
+			<form action="/cheeses/<%= cheese.id %>/edit" method="get">
+				<input type="submit" name="name" value="Edit">
+			</form>
+		</td>
+		<td>
+			<form action="/cheeses/<%= cheese.id %>/edit" method="post">
+				<input type="hiden" name="_method" value="delete">
+				<input type="submit"  value="Delete">
+			</form>
+		</td>
+
+	</tr>
+	<% end %>
+</table>
