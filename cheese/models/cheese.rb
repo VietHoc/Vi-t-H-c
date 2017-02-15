@@ -1,2 +1,2 @@
-class cheese < ActiveRecord::Base
+class Cheese < ActiveRecord::Base
 end

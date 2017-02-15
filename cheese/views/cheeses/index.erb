@@ -1,18 +1,18 @@
 <h3>Display all the cheeses</h3>
 
 <a href="/cheeses/new">New Cheese</a>
-<!--
+
 <ul>
-	<% @cheeses.each do |cheeses| %>
+	<% @cheeses.each do |cheese| %>
 		<li>
-			<a href="/cheeses/<%= cheese.id %>">
-			<%= cheeses.name %> (<%= cheeses.year %>)
-			</a>
+			<!--<a href="/cheeses/<%= cheese.id %>"> -->
+			<%= cheese.name %> (<%= cheese.year %>)
+			 <!--</a> -->
 		</li>
 	<% end %>
 
 </ul>
--->
+<!--
 <table>
 	<% @cheese.each do | cheese | %>
 	<tr>
@@ -37,3 +37,4 @@
 	</tr>
 	<% end %>
 </table>
+-->
