@@ -6,15 +6,13 @@ All The Cheese
 </a>
 
 <h1>
-	<%= @cheeses.name %> is good.
+	<%= @cheese.name %> is good.
 </h1>
 
-<a href="">EDIT</a>
 <form action="/cheeses/<%= @cheese.id %>/edit" method="get">
-	<input type="sub" value="Edit">
+	<input type="submit" value="Edit">
 </form>
 
 <form action="/cheeses/<%= @cheese.id %>" method="post">
-	<input type="hiden" name="_method" value="delete">
 	<input type="submit" value="Eat/Delete">
 </form>

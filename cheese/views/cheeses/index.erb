@@ -2,23 +2,13 @@
 
 <a href="/cheeses/new">New Cheese</a>
 
-<ul>
-	<% @cheeses.each do |cheese| %>
-		<li>
-			<!--<a href="/cheeses/<%= cheese.id %>"> -->
-			<%= cheese.name %> (<%= cheese.year %>)
-			 <!--</a> -->
-		</li>
-	<% end %>
 
-</ul>
-<!--
 <table>
-	<% @cheese.each do | cheese | %>
+	<% @cheeses.each do | cheese | %>
 	<tr>
 		
 		<td>
-			<a href="/cheese/<%= cheese.id%>">
+			<a href="/cheeses/<%= cheese.id%>">
 			<%= cheese.name %>
 			</a>
 		</td>
@@ -28,8 +18,8 @@
 			</form>
 		</td>
 		<td>
-			<form action="/cheeses/<%= cheese.id %>/edit" method="post">
-				<input type="hiden" name="_method" value="delete">
+			<form action="/cheeses/<%= cheese.id %>" method="post">
+				<input type="hidden" name="_method" value="delete">
 				<input type="submit"  value="Delete">
 			</form>
 		</td>
@@ -37,4 +27,3 @@
 	</tr>
 	<% end %>
 </table>
--->
